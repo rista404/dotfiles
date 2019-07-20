@@ -1,8 +1,8 @@
 syntax enable 
 
 "-------------General Settings--------------"
-set backspace=indent,eol,start			"Make backspace behave like every other editor.
-let mapleader = ','					"The default leader is \, but a comma is much better.
+set backspace=indent,eol,start		"Make backspace behave like every other editor.
+let mapleader = ',' 				"The default leader is \, but a comma is much better.
 set number							"Let's activate line numbers.
 
 set autoread						"When file is changed outside Vim autoload it
@@ -26,6 +26,10 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+
+set list
+set listchars=tab:→\ 
+:hi SpecialKey ctermfg=grey guifg=grey28
 
 "Get rid of split dash lines
 hi vertsplit guifg=bg
