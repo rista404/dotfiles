@@ -14,6 +14,10 @@ alias ggpush="ggp"
 abbr -a gcmsg git commit -m
 abbr -a l ls -la
 
+# Alias vim to mvim
+
+alias vim="mvim"
+
 # Welcome message
 
 function fish_greeting

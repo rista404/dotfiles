@@ -95,9 +95,15 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'mattn/emmet-vim'
 
 "Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"LISP
+Plug 'kovisoft/slimv'
+Plug 'eraserhd/parinfer-rust', {'do':
+        \  'cargo build --release'}
 
 call plug#end()
 filetype plugin indent on    " required
@@ -154,3 +160,14 @@ nmap <D-/>   <Plug>NERDCommenterToggle
 let g:go_auto_sameids = 1
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 let g:go_fmt_command = "goimports"
+
+
+"Emmet
+autocmd FileType html,css imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+"Slimv
+"let g:slimv_swank_cmd = "!ros -e '(ql:quickload :swank) (swank:create-server)' wait &"
+"let g:slimv_lisp = 'ros run'
+"let g:slimv_impl = 'sbcl'
