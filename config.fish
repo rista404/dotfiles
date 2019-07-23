@@ -53,14 +53,11 @@ set -xU TTC_BOTS 'poem_exe,tinycarebot,magicrealismbot'
 set -xU TTC_SAY_BOX "parrot"
 set -xU TTC_REPOS "/Users/rista/Projects/amondo/curation-dashboard,/Users/rista/Projects/amondo/amondo-front-monorepo,/Users/rista/Projects/amondo/relay.amondo.com,/Users/rista/Projects/amondo/amondo-graphql-api,/Users/rista/Projects/amondo/dash3,/Users/rista/Projects/amondo/amondo-monorepo"
 set -xU TTC_WEATHER "Belgrade"
-set -xU TTC_CONSUMER_KEY 'm0WDSccmswZh1QWw0nuZ3H4tq'
-set -xU TTC_CONSUMER_SECRET 'jUQGwUUxR9sb47Q0B5Jb5Pjm49Dx8zljzqyGZPm7LrXbGicTFQ'
-set -xU TTC_ACCESS_TOKEN '2653957506-wh6SMJTdjWLsnJzUIha4vLXGxZcsRTjHxribeI0'
-set -xU TTC_ACCESS_TOKEN_SECRET '59sneO5cC6nUsi2fUZuWUZ827ASG0NF5OTNWR2wqRMQKg'
+set -xU TTC_APIKEYS false
 set -xU TTC_POMODORO 25
 set -xU TTC_BREAK 5
 
-# Kewl aliases
+# Directory aliases
 
 abbr amo cd "~/Projects/amondo"
 abbr gosrc cd "$GOPATH/src/github.com/rista404"
@@ -75,6 +72,23 @@ end
 
 function wthr
 	curl -4 wttr.in/Belgrade
+end
+
+function take
+	mkdir -p $argv && cd $argv
+end
+
+function google
+	open -a $chrome (string join "" $googleSearch $argv)
+end
+
+function update_dotfiles
+	cp ~/.gitconfig .
+	cp -fR ~/.vim/colors ./.vim/
+	brew bundle dump --force
+	cp ~/.vimrc .
+	cp ~/.config/fish/config.fish .
+	cp ~/Library/Application\ Support/Code/User/settings.json . && mv settings.json vscode_settings.json
 end
 
 # Heroku Docker Up
@@ -121,20 +135,4 @@ end
 
 function ghnpr
 	open -a $chrome (ghurl)/pull/new/(curr_git_branch)
-end
-# Misc
-
-function google
-    open -a $chrome (string join "" $googleSearch $argv)
-end
-
-function take
-    mkdir -p $argv && cd $argv
-end
-
-function udotfiles
-	cp ~/.gitconfig .
-	cp -fR ~/.vim/colors ./.vim/
-	cp ~/.vimrc .
-	cp ~/.config/fish/config.fish .
 end

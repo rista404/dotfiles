@@ -1,1 +1,101 @@
-Support/Code/User/settings.json
+{
+	//
+	// Visuals
+	//
+
+	// Fonts
+	"editor.fontSize": 16,
+	"editor.fontWeight": "500",
+	"editor.fontFamily": "IBMPlexMono-Medium",
+	"editor.lineHeight": 24,
+	"editor.fontLigatures": true,
+	"editor.renderWhitespace": "boundary",
+
+	// Theme
+	"workbench.colorTheme": "Uno Due Tre",
+	"workbench.iconTheme": "file-icons",
+
+	//
+	// Elements
+	//
+	"breadcrumbs.enabled": false,
+	"editor.minimap.enabled": false,
+	"workbench.editor.showTabs": false,
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.activityBar.visible": false,
+	"workbench.tips.enabled": false,
+	"explorer.openEditors.visible": 0,
+
+	//
+	// Editor stuff
+	//
+	"extensions.ignoreRecommendations": false,
+	"window.zoomLevel": 0,
+	"editor.accessibilitySupport": "off",
+	"editor.formatOnSave": false,
+	"editor.insertSpaces": false,
+	"editor.scrollBeyondLastLine": false,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.snippetSuggestions": "top",
+	"editor.formatOnPaste": true,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"workbench.settings.editor": "json",
+	"git.confirmSync": false,
+	"zenMode.fullScreen": false,
+
+	// Liveshare
+	"liveshare.featureSet": "insiders",
+
+	//
+	// Front-End
+	//
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+
+	// Formatting
+	"javascript.format.enable": false, // disable vscode's default formatter
+	"[javascript]": {
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true
+	},
+	// Linting
+	"eslint.enable": false, // don't like the errors
+	
+	// Emmet
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+	},
+	// CSS
+	"css.lint.unknownAtRules": "ignore",
+
+	//
+	// Go
+	//
+	"go.autocompleteUnimportedPackages": true,
+	"go.useCodeSnippetsOnFunctionSuggest": true,
+	"go.lintTool": "golangci-lint",
+	"go.lintFlags": [
+		"--fast"
+	],
+	"go.useLanguageServer": true,
+	"files.associations": {
+		"*.tmpl": "html",
+	},
+
+	//
+	// Files
+	//
+	"explorer.confirmDelete": false,
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/node_modules": true,
+		"**/.meteor": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true
+	},
+}
