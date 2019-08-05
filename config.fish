@@ -44,8 +44,12 @@ set -x PATH $PATH /Users/rista/.deno/bin
 
 # Go
 set -xU GOPATH $HOME/Projects/go
-set -x PATH $PATH /usr/local/go/bin
+set -x PATH $PATH $GOPATH/bin/
 set -xU GO111MODULE "on"
+
+# Racket/Scheme
+set -x PATH $PATH /Applications/Racket\ v7.3/bin
+# alias scheme="csi" # Chicken Interpreter
 
 # Tiny Care Dashboard
 alias dash="tiny-care-terminal"
@@ -78,6 +82,8 @@ function take
 	mkdir -p $argv && cd $argv
 end
 
+set googleSearch "https://www.google.com/search?q="
+
 function google
 	open -a $chrome (string join "" $googleSearch $argv)
 end
@@ -89,6 +95,7 @@ function update_dotfiles
 	cp ~/.vimrc .
 	cp ~/.config/fish/config.fish .
 	cp ~/Library/Application\ Support/Code/User/settings.json . && mv settings.json vscode_settings.json
+	cp ~/Library/Application\ Support/Code/User/keybindings.json . && mv keybindings.json vscode_keybindings.json
 end
 
 # Heroku Docker Up
@@ -110,11 +117,14 @@ function curr_git_branch
 end
 
 set chrome "/Applications/Google Chrome.app"
-set googleSearch "https://www.google.com/search?q="
 
 function ghurl
 	set repo (git remote get-url origin | cut -d':' -f2 | cut -d'.' -f1)
 	echo https://github.com/$repo
+end
+
+function gh
+	open (ghurl)
 end
 
 function ghms

@@ -12,13 +12,15 @@
 	"editor.renderWhitespace": "boundary",
 
 	// Theme
-	"workbench.colorTheme": "Uno Due Tre",
+	"workbench.colorTheme": "Quiet Light",
 	"workbench.iconTheme": "file-icons",
 
 	//
 	// Elements
 	//
-	"breadcrumbs.enabled": false,
+	"breadcrumbs.enabled": true,
+	"breadcrumbs.filePath": "on",
+	"breadcrumbs.symbolPath": "off",
 	"editor.minimap.enabled": false,
 	"workbench.editor.showTabs": false,
 	"workbench.startupEditor": "newUntitledFile",
@@ -81,6 +83,13 @@
 		"--fast"
 	],
 	"go.useLanguageServer": true,
+	"go.alternateTools": {
+		"go-langserver": "gopls"
+	},
+	"go.languageServerExperimentalFeatures": {
+		"format": true,
+		"autoComplete": true
+	},
 	"files.associations": {
 		"*.tmpl": "html",
 	},
@@ -98,4 +107,5 @@
 		"**/CVS": true,
 		"**/.DS_Store": true
 	},
+	"workbench.statusBar.visible": false,
 }

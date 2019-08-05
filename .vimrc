@@ -101,9 +101,6 @@ Plug 'mattn/emmet-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "LISP
-Plug 'kovisoft/slimv'
-Plug 'eraserhd/parinfer-rust', {'do':
-        \  'cargo build --release'}
 
 call plug#end()
 filetype plugin indent on    " required
