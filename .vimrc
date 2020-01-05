@@ -1,4 +1,4 @@
-syntax enable 
+syntax enable
 
 "-------------General Settings--------------"
 set backspace=indent,eol,start		"Make backspace behave like every other editor.
@@ -15,11 +15,41 @@ set undodir=~/.vim/undo//
 "Tabs at 4"
 set autoindent noexpandtab tabstop=4 shiftwidth=4
 
+"Making myself a hard vimer (try)
+set mouse=
+
+if has('gui_running')
+	set macligatures
+endif
+
+" Remove newbie crutches in Command Mode
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Up> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
 "-------------Visuals--------------"
 colorscheme space_vim_theme
 set guifont=IBMPlexMono-Medium:h16
 set linespace=10						"Macvim-specific line-height.
-set macligatures
 
 set guioptions-=e						"We don't want gui tabs"
 set guioptions-=l
@@ -28,7 +58,7 @@ set guioptions-=r
 set guioptions-=R
 
 set list
-set listchars=tab:→\ 
+set listchars=tab:→\
 :hi SpecialKey ctermfg=grey guifg=grey28
 
 "Get rid of split dash lines
@@ -88,7 +118,6 @@ Plug 'skwp/greplace.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'airblade/vim-gitgutter'
 
 "Javascript
 Plug 'pangloss/vim-javascript'
@@ -138,6 +167,7 @@ let $TERM="xterm-256color"
 if !has('gui_running')
 	set t_Co=256
 endif
+
 
 let g:lightline = {
 	\ 'colorscheme': 'wombat',

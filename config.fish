@@ -13,18 +13,36 @@ alias ggpull="ggl"
 alias ggpush="ggp"
 abbr -a gcmsg git commit -m
 abbr -a l ls -la
-
-# Alias vim to mvim
-
-alias vim="mvim"
+abbr c code .
+abbr yd yarn dev
+abbr gr go run .
 
 # Welcome message
 
 function fish_greeting
 	fortune -a
+	docker info >/dev/null 2>&1; and echo "🐳 docker is running!"
+	echo "✳️  node "(node --version)
+	echo "🔷 "(go version)
 end
 
 funcsave fish_greeting
+
+# Other messages
+
+function fish_right_prompt
+	# Only show this message < 11 and > 19
+	set h (expr (date "+%H"))
+	if test "$h" -gt 11; and test "$h" -lt 19
+		echo ""
+	else
+		set_color --bold red
+		set_color -b white
+		# Reminder to learn Japanese
+		# echo "日本人"
+		set_color normal
+	end
+end
 
 # bat, alternative to cat
 set -xU BAT_THEME "TwoDark"
@@ -63,8 +81,10 @@ set -xU TTC_BREAK 5
 
 # Directory aliases
 
-abbr amo cd "~/Projects/amondo"
-abbr gosrc cd "$GOPATH/src/github.com/rista404"
+abbr amo cd "~/Projects/amondo/"
+abbr amom cd "~/Projects/amondo/amondo-monorepo/"
+abbr amod cd "~/Projects/amondo/dash3/"
+abbr amog cd "~/Projects/amondo/amondo-graphql-api/"
 
 #
 # Misc
@@ -146,3 +166,6 @@ end
 function ghnpr
 	open -a $chrome (ghurl)/pull/new/(curr_git_branch)
 end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/rista/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/rista/Downloads/google-cloud-sdk/path.fish.inc'; end

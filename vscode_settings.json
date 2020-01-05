@@ -12,7 +12,7 @@
 	"editor.renderWhitespace": "boundary",
 
 	// Theme
-	"workbench.colorTheme": "Quiet Light",
+	"workbench.colorTheme": "Noctis Azureus", // light: Quiet Light
 	"workbench.iconTheme": "file-icons",
 
 	//
@@ -54,14 +54,25 @@
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 
-	// Formatting
-	"javascript.format.enable": false, // disable vscode's default formatter
 	"[javascript]": {
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 	"[typescript]": {
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
+	"[typescriptreact]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+	},
+	"typescript.experimental.useSeparateSyntaxServer": true,
+	// Prettier
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"prettier.semi": false,
 	// Linting
 	"eslint.enable": false, // don't like the errors
 	
@@ -80,15 +91,15 @@
 	"go.useCodeSnippetsOnFunctionSuggest": true,
 	"go.lintTool": "golangci-lint",
 	"go.lintFlags": [
-		"--fast"
+		"--fast",
 	],
 	"go.useLanguageServer": true,
 	"go.alternateTools": {
-		"go-langserver": "gopls"
+		"go-langserver": "gopls",
 	},
 	"go.languageServerExperimentalFeatures": {
 		"format": true,
-		"autoComplete": true
+		"autoComplete": true,
 	},
 	"files.associations": {
 		"*.tmpl": "html",
@@ -105,7 +116,13 @@
 		"**/.meteor": true,
 		"**/.hg": true,
 		"**/CVS": true,
-		"**/.DS_Store": true
+		"**/.DS_Store": true,
 	},
 	"workbench.statusBar.visible": false,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 }
