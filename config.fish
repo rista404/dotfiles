@@ -24,6 +24,7 @@ function fish_greeting
 	docker info >/dev/null 2>&1; and echo "🐳 docker is running!"
 	echo "✳️  node "(node --version)
 	echo "🔷 "(go version)
+	echo "🔋 Battery at "(battery -p -e)
 end
 
 funcsave fish_greeting
