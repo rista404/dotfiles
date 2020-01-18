@@ -32,16 +32,15 @@ funcsave fish_greeting
 # Other messages
 
 function fish_right_prompt
-	# Only show this message < 11 and > 19
 	set h (expr (date "+%H"))
-	if test "$h" -gt 11; and test "$h" -lt 19
-		echo ""
+	set dow (expr (date "+%u"))
+	set msg "⛺︎⛺︎⛺︎"
+	# Only show this message < 11 and > 19
+	# Or during weekend
+	if test "$dow" -gt 5; or test "$h" -lt 11; or test "$h" -gt 19
+		echo "$msg"
 	else
-		set_color --bold red
-		set_color -b white
-		# Reminder to learn Japanese
-		# echo "日本人"
-		set_color normal
+		echo ""
 	end
 end
 
@@ -165,7 +164,7 @@ function ghisn
 end
 
 function ghnpr
-	open -a $chrome (ghurl)/pull/new/(curr_git_branch)
+	open -a $chrome (ghurl)/pull/new/(string escape --style=url (curr_git_branch))
 end
 
 # The next line updates PATH for the Google Cloud SDK.

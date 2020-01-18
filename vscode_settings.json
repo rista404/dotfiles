@@ -12,7 +12,7 @@
 	"editor.renderWhitespace": "boundary",
 
 	// Theme
-	"workbench.colorTheme": "Noctis Azureus", // light: Quiet Light
+	"workbench.colorTheme": "Noctis Uva", // light: Quiet Light
 	"workbench.iconTheme": "file-icons",
 
 	//
