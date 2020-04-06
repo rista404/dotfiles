@@ -12,7 +12,7 @@
 	"editor.renderWhitespace": "boundary",
 
 	// Theme
-	"workbench.colorTheme": "Noctis Uva", // light: Quiet Light
+	"workbench.colorTheme": "LaserWave", // light: Quiet Light
 	"workbench.iconTheme": "file-icons",
 
 	//
@@ -35,15 +35,22 @@
 	"window.zoomLevel": 0,
 	"editor.accessibilitySupport": "off",
 	"editor.formatOnSave": false,
+	"editor.formatOnPaste": false,
 	"editor.insertSpaces": false,
 	"editor.scrollBeyondLastLine": false,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
-	"editor.formatOnPaste": true,
 	"diffEditor.ignoreTrimWhitespace": true,
 	"workbench.settings.editor": "json",
 	"git.confirmSync": false,
 	"zenMode.fullScreen": false,
+
+	// Max panes
+	"workbench.editor.limit.enabled": true,
+	// New search
+	"search.enableSearchEditorPreview": true,
+	// JS/TS Highlights
+	"editor.semanticHighlighting.enabled": true,
 
 	// Liveshare
 	"liveshare.featureSet": "insiders",

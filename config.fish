@@ -3,7 +3,7 @@
 # 2. > curl -L https://get.oh-my.fish | fish
 # 3. > omf install chain
 # 4. > omf install https://github.com/jhillyerd/plugin-git
-# 5. > brew install fortune
+# 5. https://starship.rs/guide/#🚀-installation
 # 6. Update `~/.config/fish/config.fish`
 
 # User configuration
@@ -16,15 +16,19 @@ abbr -a l ls -la
 abbr c code .
 abbr yd yarn dev
 abbr gr go run .
+abbr vpr gh pr view
+
+# https://discourse.brew.sh/t/failed-to-set-locale-category-lc-numeric-to-en-ru/5092/14
+set -xU LC_ALL "en_US.UTF-8"
 
 # Welcome message
 
 function fish_greeting
-	fortune -a
-	docker info >/dev/null 2>&1; and echo "🐳 docker is running!"
-	echo "✳️  node "(node --version)
-	echo "🔷 "(go version)
-	echo "🔋 Battery at "(battery -p -e)
+	# fortune -a
+	# docker info >/dev/null 2>&1; and echo "🐳 docker is running!"
+	# echo "✳️  node "(node --version)
+	# echo "🔷 "(go version)
+	# echo "🔋 Battery at "(battery -p -e)
 end
 
 funcsave fish_greeting
@@ -38,7 +42,7 @@ function fish_right_prompt
 	# Only show this message < 11 and > 19
 	# Or during weekend
 	if test "$dow" -gt 5; or test "$h" -lt 11; or test "$h" -gt 19
-		echo "$msg"
+		# echo "$msg"
 	else
 		echo ""
 	end
@@ -59,6 +63,9 @@ set -x PATH $PATH $HOME/.yarn/bin $HOME/.config/yarn/global/node_modules/.bin
 
 # Deno
 set -x PATH $PATH /Users/rista/.deno/bin
+
+# Calibre
+set -x PATH $PATH /Applications/Calibre.app/Contents/MacOS
 
 # Go
 set -xU GOPATH $HOME/Projects/go
@@ -114,6 +121,7 @@ function update_dotfiles
 	brew bundle dump --force
 	cp ~/.vimrc .
 	cp ~/.config/fish/config.fish .
+	cp ~/.config/starship.toml .
 	cp ~/Library/Application\ Support/Code/User/settings.json . && mv settings.json vscode_settings.json
 	cp ~/Library/Application\ Support/Code/User/keybindings.json . && mv keybindings.json vscode_keybindings.json
 end
@@ -130,6 +138,10 @@ function hdup
 	end
 end
 
+function jira
+	open (string join "" "https://amondo.atlassian.net/browse/" $argv)
+end
+
 # Github helpers
 
 function curr_git_branch
@@ -143,7 +155,7 @@ function ghurl
 	echo https://github.com/$repo
 end
 
-function gh
+function ghr
 	open (ghurl)
 end
 
@@ -169,3 +181,5 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/rista/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/rista/Downloads/google-cloud-sdk/path.fish.inc'; end
+
+starship init fish | source
