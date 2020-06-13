@@ -1,5 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
+# Please adapt and uncomment the following lines:
 	name = rista404
 	email = risticnikola@outlook.com
 	signingkey = 74AE4D182C83962A
@@ -23,18 +24,10 @@
 [alias]
 	fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@ | sed \"s/fixup\\! //\")\"' -
 	ri = rebase --interactive --autosquash
-	# List contributors with number of commits
-	contributors = shortlog --summary --numbered
-	# Remove branches that have already been merged with master
-	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-	# Credit an author on the latest commit
-	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [commit]
-	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true

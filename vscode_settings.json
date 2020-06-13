@@ -6,13 +6,10 @@
 	// Fonts
 	"editor.fontSize": 16,
 	"editor.fontWeight": "500",
-	"editor.fontFamily": "IBMPlexMono-Medium",
+	"editor.fontFamily": "FiraCode-Medium", // IBMPlexMono-Medium
 	"editor.lineHeight": 24,
-	"editor.fontLigatures": true,
+	"editor.fontLigatures": true, // light: Quiet Light
 	"editor.renderWhitespace": "boundary",
-
-	// Theme
-	"workbench.colorTheme": "LaserWave", // light: Quiet Light
 	"workbench.iconTheme": "file-icons",
 
 	//
@@ -40,7 +37,7 @@
 	"editor.scrollBeyondLastLine": false,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
-	"diffEditor.ignoreTrimWhitespace": true,
+	"diffEditor.ignoreTrimWhitespace": false,
 	"workbench.settings.editor": "json",
 	"git.confirmSync": false,
 	"zenMode.fullScreen": false,
@@ -131,5 +128,19 @@
 	},
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"workbench.colorTheme": "Shades of Purple",
+	"terraform.indexing": {
+		"enabled": false,
+		"liveIndexing": false,
+		"delay": 500,
+		"exclude": [
+			".terraform/**/*",
+			"**/.terraform/**/*"
+		]
+	},
+	"terraform.languageServer": {
+		"enabled": true,
+		"args": []
 	},
 }
