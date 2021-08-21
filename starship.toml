@@ -17,6 +17,3 @@ disabled = true
 
 [nodejs]
 disabled = true
-
-[git_branch]
-symbol = " "

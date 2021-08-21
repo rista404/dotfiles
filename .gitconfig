@@ -1,12 +1,16 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = rista404
-	email = risticnikola@outlook.com
-	signingkey = 74AE4D182C83962A
+	email = ristic@risticnikola.com
+	signingkey = F03899491FD4BAC0
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = code -w
+	# pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = subl -w
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -24,6 +28,8 @@
 [alias]
 	fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@ | sed \"s/fixup\\! //\")\"' -
 	ri = rebase --interactive --autosquash
+	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+	mru = for-each-ref --sort=-committerdate --count=10 refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -31,3 +37,11 @@
 	smudge = git-lfs smudge -- %f
 [commit]
 	gpgsign = true
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = 1337
+	navigate = true
+	# side-by-side = true
+[interactive]
+	diffFilter = delta --color-only

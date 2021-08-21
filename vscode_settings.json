@@ -6,11 +6,17 @@
 	// Fonts
 	"editor.fontSize": 16,
 	"editor.fontWeight": "500",
-	"editor.fontFamily": "FiraCode-Medium", // IBMPlexMono-Medium
+	"editor.fontFamily": "FiraCode-Retina",
 	"editor.lineHeight": 24,
-	"editor.fontLigatures": true, // light: Quiet Light
+	"editor.fontLigatures": true,
 	"editor.renderWhitespace": "boundary",
+
+	// Theme
+	"workbench.colorTheme": "arcade", // light: Quiet Light
 	"workbench.iconTheme": "file-icons",
+	"workbench.preferredLightColorTheme": "Noctis Lilac",
+	"workbench.preferredDarkColorTheme": "Noctis Azureus",
+	"window.autoDetectColorScheme": true,
 
 	//
 	// Elements
@@ -29,7 +35,6 @@
 	// Editor stuff
 	//
 	"extensions.ignoreRecommendations": false,
-	"window.zoomLevel": 0,
 	"editor.accessibilitySupport": "off",
 	"editor.formatOnSave": false,
 	"editor.formatOnPaste": false,
@@ -37,20 +42,16 @@
 	"editor.scrollBeyondLastLine": false,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
-	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.ignoreTrimWhitespace": true,
 	"workbench.settings.editor": "json",
 	"git.confirmSync": false,
 	"zenMode.fullScreen": false,
+	"security.workspace.trust.enabled": false,
 
 	// Max panes
 	"workbench.editor.limit.enabled": true,
-	// New search
-	"search.enableSearchEditorPreview": true,
 	// JS/TS Highlights
 	"editor.semanticHighlighting.enabled": true,
-
-	// Liveshare
-	"liveshare.featureSet": "insiders",
 
 	//
 	// Front-End
@@ -70,7 +71,6 @@
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
-	"typescript.experimental.useSeparateSyntaxServer": true,
 	// Prettier
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
@@ -98,9 +98,7 @@
 		"--fast",
 	],
 	"go.useLanguageServer": true,
-	"go.alternateTools": {
-		"go-langserver": "gopls",
-	},
+	"go.toolsGopath": "/Users/rista/Projects/go",
 	"go.languageServerExperimentalFeatures": {
 		"format": true,
 		"autoComplete": true,
@@ -129,18 +127,22 @@
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"workbench.colorTheme": "Shades of Purple",
-	"terraform.indexing": {
-		"enabled": false,
-		"liveIndexing": false,
-		"delay": 500,
-		"exclude": [
-			".terraform/**/*",
-			"**/.terraform/**/*"
-		]
+
+
+	// Touchbar
+	"nasc-touchbar.goToDefinition": false, // Go to the function or variable definition
+	"nasc-touchbar.addCursorBelow": false, // Add a cursor in the line below
+	"nasc-touchbar.toggleSidebar": false, // Toggles the sidebar
+	"nasc-touchbar.togglePanel": false, // Toggles the panel in the bottom of the editor
+	"nasc-touchbar.showCommands": false, // Shows the run command prompt
+	"nasc-touchbar.rename": true, // Rename (replace all) variable or function names
+	"nasc-touchbar.showReferences": true,
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"terraform.languageServer": {
-		"enabled": true,
-		"args": []
+	"[mjml]": {
+		"editor.defaultFormatter": "mjmlio.vscode-mjml"
 	},
+	"workbench.productIconTheme": "fluent-icons",
+	"go.toolsManagement.autoUpdate": true,
 }
