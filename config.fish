@@ -14,6 +14,7 @@ alias ggpush="ggp"
 abbr -a gcmsg git commit -m
 abbr -a l ls -la
 abbr c code .
+abbr z zed .
 abbr yd yarn dev
 abbr gr go run .
 abbr vpr gh pr view
@@ -83,6 +84,7 @@ function update_dotfiles
 	brew bundle dump --force
 	cp ~/.vimrc .
 	cp ~/.config/fish/config.fish .
+	cp -fR ~/.config/zed ./zed/
 	cp ~/.config/starship.toml .
 	cp ~/Library/Application\ Support/Code/User/settings.json . && mv settings.json vscode_settings.json
 	cp ~/Library/Application\ Support/Code/User/keybindings.json . && mv keybindings.json vscode_keybindings.json

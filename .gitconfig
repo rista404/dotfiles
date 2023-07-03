@@ -5,7 +5,7 @@
 	signingkey = F03899491FD4BAC0
 [core]
 	# pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = subl -w
+	editor = zed -w
 [pager]
     diff = delta
     log = delta

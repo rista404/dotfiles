@@ -1,0 +1,82 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "base_keymap": "VSCode",
+  "project_panel": {
+    "dock": "right",
+    "git_status": true
+  },
+  "theme": "Solarized Dark",
+  "buffer_font_size": 15,
+  "buffer_font_family": "Berkeley Mono",
+  "buffer_font_features": {
+    // Enable ligatures
+    "calt": true
+  },
+  "autosave": "off",
+  "hard_tabs": true,
+  "show_whitespaces": "selection",
+  "language_overrides": {
+    "JavaScript": {
+      "hard_tabs": true,
+      "tab_size": 4,
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TypeScript": {
+      "hard_tabs": true,
+      "tab_size": 4,
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "hard_tabs": true,
+      "tab_size": 4,
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      }
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "typescript.format.convertTabsToSpaces": false
+    }
+  },
+  "experiments": {
+    "experimental_themes": true
+  },
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false
+  },
+  "confirm_quit": true,
+  "extend_comment_on_newline": false
+}

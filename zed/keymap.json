@@ -1,0 +1,13 @@
+[
+  {
+    "bindings": {
+      "cmd-k cmd-w": "pane::CloseCleanItems"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-e": "workspace::ToggleRightDock"
+    }
+  }
+]

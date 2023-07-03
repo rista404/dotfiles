@@ -6,17 +6,20 @@
 	// Fonts
 	"editor.fontSize": 16,
 	"editor.fontWeight": "500",
-	"editor.fontFamily": "FiraCode-Retina",
+	// "editor.fontFamily": "FiraCode-Retina",
+	"editor.fontFamily": "Berkeley Mono",
 	"editor.lineHeight": 24,
 	"editor.fontLigatures": true,
 	"editor.renderWhitespace": "boundary",
-
-	// Theme
-	"workbench.colorTheme": "arcade", // light: Quiet Light
-	"workbench.iconTheme": "file-icons",
-	"workbench.preferredLightColorTheme": "Noctis Lilac",
-	"workbench.preferredDarkColorTheme": "Noctis Azureus",
-	"window.autoDetectColorScheme": true,
+	// "workbench.preferredLightColorTheme": "GitHub Light Default",
+	// "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+	// "window.autoDetectColorScheme": true,
+	"workbench.productIconTheme": "fluent-icons",
+	"terminal.integrated.fontSize": 16,
+	"terminal.integrated.fontFamily": "FiraCode-Retina",
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.folders.theme": "classic",
+	"material-icon-theme.saturation": 0.8,
 
 	//
 	// Elements
@@ -30,6 +33,7 @@
 	"workbench.activityBar.visible": false,
 	"workbench.tips.enabled": false,
 	"explorer.openEditors.visible": 0,
+	"workbench.sideBar.location": "right",
 
 	//
 	// Editor stuff
@@ -42,11 +46,14 @@
 	"editor.scrollBeyondLastLine": false,
 	"editor.multiCursorModifier": "ctrlCmd",
 	"editor.snippetSuggestions": "top",
-	"diffEditor.ignoreTrimWhitespace": true,
+	"diffEditor.ignoreTrimWhitespace": false,
 	"workbench.settings.editor": "json",
 	"git.confirmSync": false,
+	"git.mergeEditor": false,
 	"zenMode.fullScreen": false,
 	"security.workspace.trust.enabled": false,
+	"editor.bracketPairColorization.enabled": true,
+	"githubPullRequests.pullBranch": "never",
 
 	// Max panes
 	"workbench.editor.limit.enabled": true,
@@ -64,6 +71,10 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
 	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+	},
+	"[javascriptreact]": {
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 	},
@@ -106,6 +117,7 @@
 	"files.associations": {
 		"*.tmpl": "html",
 	},
+	"go.toolsManagement.autoUpdate": true,
 
 	//
 	// Files
@@ -120,14 +132,23 @@
 		"**/CVS": true,
 		"**/.DS_Store": true,
 	},
-	"workbench.statusBar.visible": false,
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[html]": {
+		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-
+	"[css]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[mjml]": {
+		"editor.defaultFormatter": "mjmlio.vscode-mjml"
+	},
 
 	// Touchbar
 	"nasc-touchbar.goToDefinition": false, // Go to the function or variable definition
@@ -137,12 +158,10 @@
 	"nasc-touchbar.showCommands": false, // Shows the run command prompt
 	"nasc-touchbar.rename": true, // Rename (replace all) variable or function names
 	"nasc-touchbar.showReferences": true,
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"terminal.integrated.env.osx": {
+		"FIG_NEW_SESSION": "1"
 	},
-	"[mjml]": {
-		"editor.defaultFormatter": "mjmlio.vscode-mjml"
-	},
-	"workbench.productIconTheme": "fluent-icons",
-	"go.toolsManagement.autoUpdate": true,
+	"workbench.statusBar.visible": false,
+	"editor.inlineSuggest.enabled": true,
+	"workbench.colorTheme": "Bearded Theme Solarized Reversed",
 }
