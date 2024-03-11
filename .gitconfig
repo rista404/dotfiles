@@ -5,7 +5,8 @@
 	signingkey = F03899491FD4BAC0
 [core]
 	# pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = zed -w
+	# editor = zed -w
+	editor = code -w
 [pager]
     diff = delta
     log = delta
@@ -45,3 +46,11 @@
 	# side-by-side = true
 [interactive]
 	diffFilter = delta --color-only
+[pull]
+	rebase = false
+[merge]
+	conflictStyle = zdiff3
+[rerere]
+	enabled = true
+[column]
+	ui = auto

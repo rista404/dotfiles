@@ -8,16 +8,36 @@
 // from the command palette or from `Zed` application menu.
 {
   "base_keymap": "VSCode",
+  "ui_font_size": 15,
   "project_panel": {
     "dock": "right",
-    "git_status": true
+    "git_status": true,
+    "indent_size": 12
   },
-  "theme": "Solarized Dark",
+  // "theme": "Gruvbox Dark Hard",
+  "theme": {
+    "dark": "Carbonfox",
+    "light": "Tokyo Night Storm",
+    "mode": "system"
+  },
+  "toolbar": {
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
   "buffer_font_size": 15,
   "buffer_font_family": "Berkeley Mono",
+  "ui_font_family": "Berkeley Mono",
   "buffer_font_features": {
     // Enable ligatures
     "calt": true
+  },
+  "assistant": {
+    "button": false
+  },
+  "terminal": {
+    "shell": {
+      "program": "fish"
+    }
   },
   "autosave": "off",
   "hard_tabs": true,
@@ -29,21 +49,47 @@
       "format_on_save": {
         "external": {
           "command": "prettier",
-          "arguments": [
-            "--stdin-filepath",
-            "{buffer_path}"
-          ]
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
       }
+    },
+    "JSON": {
+      "hard_tabs": true,
+      "tab_size": 4,
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "HTML": {
+      "format_on_save": "off"
+    },
+    "CSS": {
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+      // "format_on_save": "off"
     },
     "TypeScript": {
       "hard_tabs": true,
       "tab_size": 4,
       "format_on_save": {
         "external": {
-          "command": "prettier",
+          "command": "biome",
           "arguments": [
-            "--stdin-filepath",
+            "format",
+            "--skip-errors",
+            "--indent-style=tab",
+            "--indent-width=4",
+            "--semicolons=as-needed",
+            "--arrow-parentheses=as-needed",
+            "--quote-style=single",
+            "--stdin-file-path",
             "{buffer_path}"
           ]
         }
@@ -54,9 +100,16 @@
       "tab_size": 4,
       "format_on_save": {
         "external": {
-          "command": "prettier",
+          "command": "biome",
           "arguments": [
-            "--stdin-filepath",
+            "format",
+            "--skip-errors",
+            "--indent-style=tab",
+            "--indent-width=4",
+            "--semicolons=as-needed",
+            "--arrow-parentheses=as-needed",
+            "--quote-style=single",
+            "--stdin-file-path",
             "{buffer_path}"
           ]
         }
@@ -78,5 +131,6 @@
     "metrics": false
   },
   "confirm_quit": true,
-  "extend_comment_on_newline": false
+  "extend_comment_on_newline": false,
+  "private_files": [".env", ".dev.vars", ".env.production"]
 }
