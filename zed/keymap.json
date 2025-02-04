@@ -18,7 +18,8 @@
 			"cmd-ctrl-up": "editor::MoveLineUp",
 			"cmd-ctrl-down": "editor::MoveLineDown",
 			"cmd-[": "workspace::ActivatePreviousPane",
-			"cmd-]": "workspace::ActivateNextPane"
+			"cmd-]": "workspace::ActivateNextPane",
+			"alt-z": "editor::ToggleSoftWrap"
 		}
 	},
 	{
