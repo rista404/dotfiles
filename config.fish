@@ -80,6 +80,8 @@ function update_dotfiles
 	cp ~/.config/zed/keymap.json ./zed/keymap.json
 	cp ~/.config/zed/settings.json ./zed/settings.json
 	cp ~/.config/starship.toml .
+	cp ~/.config/starship.toml .
+	cp ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty_config
 end
 
 starship init fish | source
