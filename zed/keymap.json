@@ -16,7 +16,17 @@
 		"bindings": {
 			"cmd-shift-d": "editor::DuplicateLineDown",
 			"cmd-ctrl-up": "editor::MoveLineUp",
-			"cmd-ctrl-down": "editor::MoveLineDown"
+			"cmd-ctrl-down": "editor::MoveLineDown",
+			"cmd-[": "workspace::ActivatePreviousPane",
+			"cmd-]": "workspace::ActivateNextPane"
+		}
+	},
+	{
+		"context": "Terminal",
+		"use_key_equivalents": true,
+		"bindings": {
+			"cmd-[": "workspace::ActivatePreviousPane",
+			"cmd-]": "workspace::ActivateNextPane"
 		}
 	}
 ]
