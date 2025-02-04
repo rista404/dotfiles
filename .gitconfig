@@ -1,10 +1,10 @@
 # This is Git's per-user configuration file.
 [user]
-	name = rista404
+	name = Nikola Ristić
 	email = ristic@risticnikola.com
-	signingkey = F03899491FD4BAC0
+	signingkey = 02BCD31040AB8CAD
 [core]
-	# pager = diff-so-fancy | less --tabs=4 -RFX
+	# pager = delta
 	# editor = zed -w
 	editor = code -w
 [pager]
@@ -14,18 +14,6 @@
     show = delta
 [color]
 	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
 [alias]
 	fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@ | sed \"s/fixup\\! //\")\"' -
 	ri = rebase --interactive --autosquash
@@ -41,11 +29,14 @@
 [delta]
 	plus-style = "syntax #012800"
 	minus-style = "syntax #340001"
-	syntax-theme = 1337
 	navigate = true
+	features = decorations
+	true-color = always
 	# side-by-side = true
+[diff]
+    colorMoved = default
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only --features=interactive
 [pull]
 	rebase = false
 [merge]

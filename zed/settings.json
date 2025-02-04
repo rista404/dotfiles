@@ -7,130 +7,57 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "base_keymap": "VSCode",
-  "ui_font_size": 15,
-  "project_panel": {
-    "dock": "right",
-    "git_status": true,
-    "indent_size": 12
+	"assistant": {
+  "default_model": {
+   "provider": "copilot_chat",
+   "model": "o3-mini"
   },
-  // "theme": "Gruvbox Dark Hard",
-  "theme": {
-    "dark": "Carbonfox",
-    "light": "Tokyo Night Storm",
-    "mode": "system"
-  },
-  "toolbar": {
-    "quick_actions": false,
-    "breadcrumbs": false
-  },
-  "buffer_font_size": 15,
-  "buffer_font_family": "Berkeley Mono",
-  "ui_font_family": "Berkeley Mono",
-  "buffer_font_features": {
-    // Enable ligatures
-    "calt": true
-  },
-  "assistant": {
-    "button": false
-  },
-  "terminal": {
-    "shell": {
-      "program": "fish"
-    }
-  },
-  "autosave": "off",
-  "hard_tabs": true,
-  "show_whitespaces": "selection",
-  "language_overrides": {
-    "JavaScript": {
-      "hard_tabs": true,
-      "tab_size": 4,
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "JSON": {
-      "hard_tabs": true,
-      "tab_size": 4,
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "HTML": {
-      "format_on_save": "off"
-    },
-    "CSS": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-      // "format_on_save": "off"
-    },
-    "TypeScript": {
-      "hard_tabs": true,
-      "tab_size": 4,
-      "format_on_save": {
-        "external": {
-          "command": "biome",
-          "arguments": [
-            "format",
-            "--skip-errors",
-            "--indent-style=tab",
-            "--indent-width=4",
-            "--semicolons=as-needed",
-            "--arrow-parentheses=as-needed",
-            "--quote-style=single",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
-    },
-    "TSX": {
-      "hard_tabs": true,
-      "tab_size": 4,
-      "format_on_save": {
-        "external": {
-          "command": "biome",
-          "arguments": [
-            "format",
-            "--skip-errors",
-            "--indent-style=tab",
-            "--indent-width=4",
-            "--semicolons=as-needed",
-            "--arrow-parentheses=as-needed",
-            "--quote-style=single",
-            "--stdin-file-path",
-            "{buffer_path}"
-          ]
-        }
-      }
-    }
-  },
-  "lsp": {
-    "typescript-language-server": {
-      "typescript.format.convertTabsToSpaces": false
-    }
-  },
-  "experiments": {
-    "experimental_themes": true
-  },
-  "telemetry": {
-    // Send debug info like crash reports.
-    "diagnostics": false,
-    // Send anonymized usage data like what languages you're using Zed with.
-    "metrics": false
-  },
-  "confirm_quit": true,
-  "extend_comment_on_newline": false,
-  "private_files": [".env", ".dev.vars", ".env.production"]
+  "version": "2"
+ },
+ "base_keymap": "VSCode",
+	"ui_font_size": 13,
+	"tab_bar": {
+		"show": false
+	},
+	"project_panel": {
+		"dock": "right",
+		"git_status": true,
+		"indent_size": 12
+	},
+	"theme": {
+		"dark": "Carbonfox",
+		"light": "Xcode Presentation Darker",
+		"mode": "system"
+	},
+	"toolbar": {
+		"quick_actions": false,
+		"breadcrumbs": true
+	},
+	"buffer_font_size": 15,
+	"buffer_font_family": "Berkeley Mono",
+	"ui_font_family": "Berkeley Mono",
+	"buffer_font_features": {
+		// Enable ligatures
+		"calt": true
+	},
+	"terminal": {
+		"shell": {
+			"program": "fish"
+		}
+	},
+	"autosave": "off",
+	"hard_tabs": true,
+	"show_whitespaces": "selection",
+	"experiments": {
+		"experimental_themes": true
+	},
+	"telemetry": {
+		// Send debug info like crash reports.
+		"diagnostics": false,
+		// Send anonymized usage data like what languages you're using Zed with.
+		"metrics": false
+	},
+	"confirm_quit": true,
+	"extend_comment_on_newline": false,
+	"private_files": [".env", ".dev.vars", ".env.production"]
 }

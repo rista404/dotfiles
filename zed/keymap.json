@@ -1,13 +1,22 @@
 [
-  {
-    "bindings": {
-      "cmd-k cmd-w": "pane::CloseCleanItems"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-shift-e": "workspace::ToggleRightDock"
-    }
-  }
+	{
+		"bindings": {
+			"cmd-k cmd-w": "pane::CloseCleanItems",
+			"cmd-shift-e": "project_panel::ToggleFocus"
+		}
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"alt-cmd-o": ["projects::OpenRecent", { "create_new_window": true }]
+		}
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"cmd-shift-d": "editor::DuplicateLineDown",
+			"cmd-ctrl-up": "editor::MoveLineUp",
+			"cmd-ctrl-down": "editor::MoveLineDown"
+		}
+	}
 ]

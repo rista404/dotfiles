@@ -2,6 +2,10 @@
 # 1. > brew install fish
 # 2. set fish as a shell and set to default shell
 # 3. install manually https://github.com/jhillyerd/plugin-git
+ # git clone git@github.com:jhillyerd/plugin-git.git
+ # cd plugin-git/
+ # cp -r ./functions/ ~/.config/fish/functions/
+ # cp -r ./conf.d/ ~/.config/fish/conf.d/
 # 4. https://starship.rs/
 # 5. Update `~/.config/fish/config.fish`
 
@@ -41,9 +45,6 @@ set -x PATH $PATH /Applications/Postgres.app/Contents/Versions/latest/bin
 # Rust
 set -x PATH $PATH $HOME/.cargo/bin
 
-# Deno
-set -x PATH $PATH /Users/rista/.deno/bin
-
 # Calibre
 set -x PATH $PATH /Applications/Calibre.app/Contents/MacOS
 
@@ -51,6 +52,12 @@ set -x PATH $PATH /Applications/Calibre.app/Contents/MacOS
 set -xU GOPATH $HOME/Projects/go
 set -x PATH $PATH $GOPATH/bin/
 set -xU GO111MODULE "on"
+
+# fnm
+# fnm install 23.7.0
+# fnm default 23.7.0
+# fnm completions --shell fish | tee ~/.config/fish/completions/fnm.fish
+fnm env --shell fish | source
 
 # Directory aliases
 
@@ -70,10 +77,9 @@ function update_dotfiles
 	cp ~/.gitconfig .
 	brew bundle dump --force
 	cp ~/.config/fish/config.fish .
-	cp -fR ~/.config/zed ./zed/
+	cp ~/.config/zed/keymap.json ./zed/keymap.json
+	cp ~/.config/zed/settings.json ./zed/settings.json
 	cp ~/.config/starship.toml .
-	cp ~/Library/Application\ Support/Code/User/settings.json . && mv settings.json vscode_settings.json
-	cp ~/Library/Application\ Support/Code/User/keybindings.json . && mv keybindings.json vscode_keybindings.json
 end
 
 starship init fish | source

@@ -16,4 +16,4 @@ truncate_to_repo = false
 disabled = true
 
 [nodejs]
-disabled = true
+symbol = "⬢ "

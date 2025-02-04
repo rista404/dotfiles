@@ -12,10 +12,7 @@
 	"editor.fontLigatures": true,
 	"editor.renderWhitespace": "boundary",
 	"terminal.integrated.fontSize": 16,
-	"terminal.integrated.fontFamily": "FiraCode-Retina",
-	"workbench.iconTheme": "material-icon-theme",
-	"material-icon-theme.folders.theme": "classic",
-	"material-icon-theme.saturation": 0.8,
+	"terminal.integrated.fontFamily": "Berkeley Mono",
 
 	//
 	// Elements
@@ -47,7 +44,6 @@
 	"zenMode.fullScreen": false,
 	"security.workspace.trust.enabled": false,
 	"editor.bracketPairColorization.enabled": true,
-	"githubPullRequests.pullBranch": "never",
 
 	// Max panes
 	"workbench.editor.limit.enabled": true,
@@ -140,28 +136,12 @@
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[mjml]": {
-		"editor.defaultFormatter": "mjmlio.vscode-mjml"
-	},
 
-	// Touchbar
-	"nasc-touchbar.goToDefinition": false, // Go to the function or variable definition
-	"nasc-touchbar.addCursorBelow": false, // Add a cursor in the line below
-	"nasc-touchbar.toggleSidebar": false, // Toggles the sidebar
-	"nasc-touchbar.togglePanel": false, // Toggles the panel in the bottom of the editor
-	"nasc-touchbar.showCommands": false, // Shows the run command prompt
-	"nasc-touchbar.rename": true, // Rename (replace all) variable or function names
-	"nasc-touchbar.showReferences": true,
-	"terminal.integrated.env.osx": {
-		"FIG_NEW_SESSION": "1"
-	},
 	"editor.inlineSuggest.enabled": true,
 	"workbench.colorTheme": "Monokai Dimmed",
 	"terminal.integrated.shellIntegration.enabled": false,
-	"diffEditor.ignoreTrimWhitespace": false,
 	"workbench.activityBar.location": "hidden",
 	"workbench.statusBar.visible": false,
-	"zig.path": "",
-	"zig.zls.path": "/Users/rista/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
-	"zig.initialSetupDone": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"scm.inputFontFamily": "editor",
 }
