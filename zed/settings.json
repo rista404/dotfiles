@@ -25,7 +25,7 @@
 		"indent_size": 12
 	},
 	"theme": {
-		"dark": "Carbonfox",
+		"dark": "Hacker Night Vision Dark Blackops",
 		"light": "Xcode Presentation Darker",
 		"mode": "system"
 	},
@@ -41,7 +41,7 @@
 	"gutter": {
 		"line_numbers": false
 	},
-	"buffer_font_size": 15.0,
+	"buffer_font_size": 14.0,
 	"buffer_font_family": "Berkeley Mono",
 	"ui_font_family": "Berkeley Mono",
 	"buffer_font_features": {
@@ -51,6 +51,9 @@
 	"terminal": {
 		"shell": {
 			"program": "fish"
+		},
+		"toolbar": {
+			"breadcrumbs": false
 		}
 	},
 	"autosave": "off",
