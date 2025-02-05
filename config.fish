@@ -37,21 +37,20 @@ set -xU BAT_THEME "TwoDark"
 alias cat="bat"
 
 # Homebrew
-set -x PATH $PATH /opt/homebrew/bin
+fish_add_path /opt/homebrew/bin
 
 # Postgres.app
-set -x PATH $PATH /Applications/Postgres.app/Contents/Versions/latest/bin
+fish_add_path /Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Rust
-set -x PATH $PATH $HOME/.cargo/bin
+fish_add_path ~/.cargo/bin
 
 # Calibre
-set -x PATH $PATH /Applications/Calibre.app/Contents/MacOS
+fish_add_path /Applications/Calibre.app/Contents/MacOS
 
 # Go
 set -xU GOPATH $HOME/Projects/go
-set -x PATH $PATH $GOPATH/bin/
-set -xU GO111MODULE "on"
+fish_add_path $GOPATH/bin/
 
 # fnm
 # fnm install 23.7.0
@@ -59,11 +58,12 @@ set -xU GO111MODULE "on"
 # fnm completions --shell fish | tee ~/.config/fish/completions/fnm.fish
 fnm env --shell fish | source
 
-# Directory aliases
 
 #
 # Misc
 #
+
+alias rm="echo Use 'trash', or the full path '/bin/rm'"
 
 function ip
 	ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'

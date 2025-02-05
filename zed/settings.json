@@ -41,7 +41,7 @@
 	"gutter": {
 		"line_numbers": false
 	},
-	"buffer_font_size": 15,
+	"buffer_font_size": 15.0,
 	"buffer_font_family": "Berkeley Mono",
 	"ui_font_family": "Berkeley Mono",
 	"buffer_font_features": {
