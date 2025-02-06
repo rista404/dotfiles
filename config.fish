@@ -52,6 +52,9 @@ fish_add_path /Applications/Calibre.app/Contents/MacOS
 set -xU GOPATH $HOME/Projects/go
 fish_add_path $GOPATH/bin/
 
+# Foundry
+fish_add_path -a /Users/rista/.foundry/bin
+
 # fnm
 # fnm install 23.7.0
 # fnm default 23.7.0
