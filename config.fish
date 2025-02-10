@@ -82,9 +82,16 @@ function update_dotfiles
 	cp ~/.config/fish/config.fish .
 	cp ~/.config/zed/keymap.json ./zed/keymap.json
 	cp ~/.config/zed/settings.json ./zed/settings.json
-	cp ~/.config/starship.toml .
-	cp ~/.config/starship.toml .
+	cp ~/.config/starship/starship.toml ./starship/
+	cp ~/.config/starship/starship-zen.toml ./starship/
 	cp ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty_config
 end
+
+set -g STARSHIP_CONFIG_DEF ~/.config/starship/starship.toml
+set -g STARSHIP_CONFIG_ZEN ~/.config/starship/starship-zen.toml
+set -x STARSHIP_CONFIG $STARSHIP_CONFIG_DEF
+
+alias ssdef "set -x STARSHIP_CONFIG $STARSHIP_CONFIG_DEF"
+alias sszen "set -x STARSHIP_CONFIG $STARSHIP_CONFIG_ZEN"
 
 starship init fish | source

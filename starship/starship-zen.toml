@@ -1,0 +1,40 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold fg:color_red)'
+
+[aws]
+disabled = true
+
+[line_break]
+disabled = true
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_length = 1
+truncate_to_repo = true
+
+[directory.substitutions]
+'/Users/rista/Projects/commonprefix' = 'cp'
+
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[git_status]
+disabled = true
+
+[git_branch]
+disabled = true
+
+[rust]
+disabled = true
+
+[solidity]
+disabled = true
