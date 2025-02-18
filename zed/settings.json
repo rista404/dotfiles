@@ -9,8 +9,8 @@
 {
 	"assistant": {
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "o3-mini"
+			"provider": "zed.dev",
+			"model": "claude-3-5-sonnet-latest"
 		},
 		"version": "2"
 	},
@@ -25,8 +25,8 @@
 		"indent_size": 12
 	},
 	"theme": {
-		"dark": "Hacker Night Vision Dark Blackops",
-		"light": "Xcode Presentation Darker",
+		"dark": "Atelier Cave Dark",
+		"light": "Atelier Plateau Dark",
 		"mode": "system"
 	},
 	"toolbar": {
@@ -47,7 +47,7 @@
 			"vertical": true
 		}
 	},
-	"buffer_font_size": 14.0,
+	"buffer_font_size": 15.0,
 	"buffer_font_family": "Berkeley Mono",
 	"ui_font_family": "Berkeley Mono",
 	"buffer_font_features": {
@@ -76,5 +76,10 @@
 	},
 	"confirm_quit": true,
 	"extend_comment_on_newline": false,
-	"private_files": [".env", ".dev.vars", ".env.production"]
+	"private_files": [".env", ".dev.vars", ".env.production"],
+	"languages": {
+		"Plain Text": {
+			"show_edit_predictions": false
+		}
+	}
 }

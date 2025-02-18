@@ -13,12 +13,17 @@
 
 set -xU DO_NOT_TRACK 1
 set -xU EDITOR "zed -w"
+
+# editor shortcuts
+abbr c code .
+abbr z zed .
+
+# git helpers
 abbr ggpull git pull origin \(__git.current_branch\)
 abbr ggpush git push origin \(__git.current_branch\)
 abbr -a gcmsg git commit -m
-abbr -a l ls -la
-abbr c code .
-abbr z zed .
+
+# gh helpers
 abbr gwr gh repo view -w
 abbr ghwpr gh pr view -w
 abbr ghnpr gh pr create -w
@@ -68,6 +73,8 @@ fnm env --shell fish | source
 
 alias rm="echo Use 'trash', or the full path '/bin/rm'"
 
+abbr -a l ls -la
+
 function ip
 	ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
 end
@@ -86,6 +93,8 @@ function update_dotfiles
 	cp ~/.config/starship/starship-zen.toml ./starship/
 	cp ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty_config
 end
+
+# starship profiles
 
 set -g STARSHIP_CONFIG_DEF ~/.config/starship/starship.toml
 set -g STARSHIP_CONFIG_ZEN ~/.config/starship/starship-zen.toml
