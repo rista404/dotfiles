@@ -25,6 +25,7 @@ bind alt-backspace backward-kill-word
 # User configuration
 #
 
+set -xU ADBLOCK 1
 set -xU DO_NOT_TRACK 1
 set -xU EDITOR "zed -w"
 

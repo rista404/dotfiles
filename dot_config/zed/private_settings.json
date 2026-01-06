@@ -47,7 +47,7 @@
 	"theme": {
 		"dark": "Serendipity Midnight Minimal - No Italics",
 		"light": "Gruvbox Light Hard",
-		"mode": "light",
+		"mode": "system",
 	},
 	"minimap": {
 		"show": "never",
