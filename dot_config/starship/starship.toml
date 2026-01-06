@@ -1,0 +1,25 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+[aws]
+disabled = false
+format = '[aws $profile]($style) '
+
+[line_break]
+disabled = true
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_length = 1
+truncate_to_repo = false
+
+[package]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+symbol = "⬢ "

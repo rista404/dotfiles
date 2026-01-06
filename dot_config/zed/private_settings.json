@@ -1,0 +1,114 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+	"search": {
+		"center_on_match": true,
+	},
+	"edit_predictions": {
+		"mode": "eager",
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null,
+			"enterprise_uri": null,
+		},
+		"enabled_in_text_threads": false,
+	},
+	"agent": {
+		"default_profile": "ask",
+		"dock": "left",
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "claude-opus-4.5",
+		},
+	},
+	"features": {
+		"edit_prediction_provider": "copilot",
+	},
+	"base_keymap": "VSCode",
+	"ui_font_size": 12,
+	"agent_ui_font_size": 16,
+	"tab_bar": {
+		"show": false,
+	},
+	"project_panel": {
+		"dock": "right",
+		"git_status": true,
+		"indent_size": 12,
+	},
+	"file_finder": {
+		"modal_max_width": "large",
+	},
+	"theme": {
+		"dark": "Serendipity Midnight Minimal - No Italics",
+		"light": "Gruvbox Light Hard",
+		"mode": "light",
+	},
+	"minimap": {
+		"show": "never",
+	},
+	"toolbar": {
+		"quick_actions": false,
+		"breadcrumbs": true,
+	},
+	"git": {
+		"inline_blame": {
+			"enabled": false,
+		},
+	},
+	"gutter": {
+		"line_numbers": false,
+	},
+	"scrollbar": {
+		"axes": {
+			"horizontal": false,
+			"vertical": true,
+		},
+	},
+	"buffer_font_size": 15.0,
+	"buffer_font_family": "Berkeley Mono",
+	"ui_font_family": "Berkeley Mono",
+	"buffer_font_features": {
+		// Enable ligatures
+		"calt": true,
+	},
+	"terminal": {
+		"shell": {
+			"program": "fish",
+		},
+		"toolbar": {
+			"breadcrumbs": false,
+		},
+	},
+	"lsp": {
+		"rust-analyzer": {
+			"initialization_options": {
+				"check": {
+					"command": "clippy", // rust-analyzer.check.command (default: "check")
+				},
+			},
+		},
+	},
+	"autosave": "off",
+	"hard_tabs": true,
+	"show_whitespaces": "selection",
+	"telemetry": {
+		// Send debug info like crash reports.
+		"diagnostics": false,
+		// Send anonymized usage data like what languages you're using Zed with.
+		"metrics": false,
+	},
+	"confirm_quit": true,
+	"extend_comment_on_newline": false,
+	"private_files": [".env", ".dev.vars", ".env.production"],
+	"languages": {
+		"Plain Text": {
+			"show_edit_predictions": false,
+		},
+	},
+}

@@ -1,0 +1,44 @@
+[user]
+	name = Nikola Ristić
+	email = ristic@risticnikola.com
+	signingkey = 02BCD31040AB8CAD
+[core]
+	editor = zed -w
+[pager]
+    log = delta
+    reflog = delta
+    show = delta
+[color]
+	ui = true
+[alias]
+	fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@ | sed \"s/fixup\\! //\")\"' -
+	ri = rebase --interactive --autosquash
+	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+	mru = for-each-ref --sort=-committerdate --count=10 refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[commit]
+	gpgsign = true
+[delta]
+	navigate = true
+	features = decorations
+	true-color = always
+	# side-by-side = true
+[diff]
+    external = difft
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[pull]
+	rebase = false
+[merge]
+	conflictStyle = diff3
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[rerere]
+	enabled = true
+[column]
+	ui = auto
