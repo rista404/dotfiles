@@ -2,6 +2,8 @@
 	name = Nikola Ristić
 	email = ristic@risticnikola.com
 	signingkey = 02BCD31040AB8CAD
+[init]
+	defaultBranch = main
 [core]
 	editor = zed -w
 [pager]
