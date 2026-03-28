@@ -12,19 +12,16 @@ sudo scutil --set LocalHostName your-macbook-name
 sudo scutil --set ComputerName your-macbook-name
 ```
 
-2. Make sure your YubiKey is plugged in (needed to decrypt secrets during apply)
-3. Run:
+2. Run:
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
-  && eval "$(/opt/homebrew/bin/brew shellenv)" \
-  && brew install chezmoi gnupg \
-  && curl https://github.com/rista404.gpg | gpg --import \
-  && gpg --card-status \
-  && chezmoi init --apply rista404
+curl -fsSL https://raw.githubusercontent.com/rista404/dotfiles/main/bootstrap.sh | bash
 ```
 
 This will:
-- Install Homebrew, chezmoi, and gnupg (gnupg needed to decrypt secrets before the bootstrap script runs)
-- Clone this repo, apply all dotfiles, and run the bootstrap script
-- Bootstrap script installs all packages from Brewfile and sets fish as default shell
+- Install Homebrew and gnupg
+- Import your GPG public key from GitHub
+- Prompt you to plug in your YubiKey
+- Generate a new SSH key and pause so you can add it to GitHub
+- Install chezmoi and apply all dotfiles
+- Run the post-install script (brew bundle, fish shell, rust, node)
