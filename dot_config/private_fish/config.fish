@@ -1,17 +1,3 @@
-#
-# Fish setup
-#
-# 1. > brew install fish
-# 2. set fish as a shell and set to default shell
-# 3. install manually https://github.com/jhillyerd/plugin-git
-#    git clone git@github.com:jhillyerd/plugin-git.git
-#    cd plugin-git/
-#    cp -r ./functions/ ~/.config/fish/functions/
-#    cp -r ./conf.d/ ~/.config/fish/conf.d/
-# 4. https://starship.rs/
-# 5. Update `~/.config/fish/config.fish`
-#
-
 
 #
 # Keybindings
@@ -106,10 +92,6 @@ set -gx CPATH /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 # amp
 fish_add_path ~/.local/bin
 
-# fnm
-# fnm install 23.7.0
-# fnm default 23.7.0
-# fnm completions --shell fish | tee ~/.config/fish/completions/fnm.fish
 fnm env --shell fish | source
 
 
