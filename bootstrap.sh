@@ -21,13 +21,13 @@ gpg --import /tmp/rista404.gpg
 rm /tmp/rista404.gpg
 
 echo "Make sure your YubiKey is plugged in, then press Enter..."
-read -r
-gpg --card-status
+read -r < /dev/tty
+gpg --card-status < /dev/tty
 
 # ── SSH key ───────────────────────────────────────────────────────────────────
 if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
   echo "Generating SSH key..."
-  ssh-keygen -t ed25519 -C "$(hostname)"
+  ssh-keygen -t ed25519 -C "$(hostname)" < /dev/tty
   ssh-add --apple-use-keychain "$HOME/.ssh/id_ed25519"
 fi
 
@@ -36,7 +36,7 @@ echo "Add this SSH key to GitHub (https://github.com/settings/ssh/new), then pre
 echo ""
 cat "$HOME/.ssh/id_ed25519.pub"
 echo ""
-read -r
+read -r < /dev/tty
 
 # ── chezmoi ───────────────────────────────────────────────────────────────────
 brew install chezmoi
