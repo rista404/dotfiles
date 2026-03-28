@@ -19,13 +19,9 @@ if ! xcode-select -p &>/dev/null; then
 fi
 
 # ── Homebrew ─────────────────────────────────────────────────────────────────
+# Homebrew is installed by the bootstrap one-liner in the README before this script runs.
+# We just need to ensure it's in PATH.
 BREW_PREFIX="$([ "$(uname -m)" = "arm64" ] && echo /opt/homebrew || echo /usr/local)"
-
-if ! command -v brew &>/dev/null; then
-  echo "Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
 eval "$("$BREW_PREFIX/bin/brew" shellenv)"
 
 # ── Rust via rustup ──────────────────────────────────────────────────────────
