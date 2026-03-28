@@ -39,8 +39,8 @@ echo ""
 read -r < /dev/tty
 
 # ── chezmoi ───────────────────────────────────────────────────────────────────
-# Restart gpg-agent to ensure the Homebrew version is used (not the system one)
 gpgconf --kill all
+export GPG_TTY=/dev/tty
 
 brew install chezmoi
 chezmoi init --apply rista404
