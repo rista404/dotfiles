@@ -62,8 +62,9 @@ fish_add_path ~/.cargo/bin
 fish_add_path /Applications/Calibre.app/Contents/MacOS
 
 # Go
-set -xU GOPATH $HOME/Projects/go
-fish_add_path $GOPATH/bin/
+set -xU GOPATH $HOME/.go
+set -xU GOMODCACHE $HOME/.cache/go/mod
+fish_add_path $GOPATH/bin
 
 # Foundry
 fish_add_path -a $HOME/.foundry/bin
