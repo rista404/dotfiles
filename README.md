@@ -19,6 +19,7 @@ sudo scutil --set ComputerName your-macbook-name
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
   && eval "$(/opt/homebrew/bin/brew shellenv)" \
   && brew install chezmoi gnupg \
+  && gpg --card-status \
   && chezmoi init --apply rista404
 ```
 

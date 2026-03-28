@@ -2,14 +2,6 @@
 set -euo pipefail
 trap 'echo "Bootstrap failed at line $LINENO"' ERR
 
-# ── GPG / YubiKey ────────────────────────────────────────────────────────────
-# Fetches the public key stub from the YubiKey. Trust must be set manually:
-#   gpg --edit-key <keyid> → trust → 5 → quit
-if command -v gpg &>/dev/null; then
-  echo "Fetching GPG key stub from YubiKey (make sure it's plugged in)..."
-  gpg --card-status || echo "Warning: YubiKey not found, skipping. Run 'gpg --card-status' manually after plugging it in."
-fi
-
 # ── Xcode CLI Tools ──────────────────────────────────────────────────────────
 if ! xcode-select -p &>/dev/null; then
   echo "Installing Xcode Command Line Tools..."

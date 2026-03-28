@@ -13,6 +13,7 @@ bind alt-backspace backward-kill-word
 
 set -xU ADBLOCK 1
 set -xU DO_NOT_TRACK 1
+set -xU HOMEBREW_NO_ANALYTICS 1
 set -xU EDITOR "zed -w"
 
 # editor shortcuts
