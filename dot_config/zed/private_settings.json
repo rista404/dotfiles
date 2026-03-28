@@ -7,92 +7,93 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"git_panel": {
+		"tree_view": true
+	},
 	"search": {
-		"center_on_match": true,
+		"center_on_match": true
 	},
 	"edit_predictions": {
+		"provider": "copilot",
 		"mode": "eager",
 		"copilot": {
 			"proxy": null,
 			"proxy_no_verify": null,
-			"enterprise_uri": null,
+			"enterprise_uri": null
 		},
-		"enabled_in_text_threads": false,
+		"enabled_in_text_threads": false
 	},
 	"agent": {
 		"default_profile": "ask",
 		"dock": "left",
 		"default_model": {
 			"provider": "copilot_chat",
-			"model": "claude-opus-4.5",
-		},
-	},
-	"features": {
-		"edit_prediction_provider": "copilot",
+			"model": "claude-opus-4.5"
+		}
 	},
 	"base_keymap": "VSCode",
 	"ui_font_size": 12,
 	"agent_ui_font_size": 16,
 	"tab_bar": {
-		"show": false,
+		"show": false
 	},
 	"project_panel": {
 		"dock": "right",
 		"git_status": true,
-		"indent_size": 12,
+		"indent_size": 12
 	},
 	"file_finder": {
-		"modal_max_width": "large",
+		"modal_max_width": "large"
 	},
 	"theme": {
-		"dark": "Serendipity Midnight Minimal - No Italics",
-		"light": "Gruvbox Light Hard",
-		"mode": "system",
+		"dark": "Fleet Dark",
+		"light": "Kanagawa Lotus - No Italics",
+		"mode": "dark"
 	},
 	"minimap": {
-		"show": "never",
+		"show": "never"
 	},
 	"toolbar": {
 		"quick_actions": false,
-		"breadcrumbs": true,
+		"breadcrumbs": true
 	},
 	"git": {
 		"inline_blame": {
-			"enabled": false,
-		},
+			"enabled": false
+		}
 	},
 	"gutter": {
-		"line_numbers": false,
+		"line_numbers": false
 	},
 	"scrollbar": {
 		"axes": {
 			"horizontal": false,
-			"vertical": true,
-		},
+			"vertical": true
+		}
 	},
 	"buffer_font_size": 15.0,
 	"buffer_font_family": "Berkeley Mono",
 	"ui_font_family": "Berkeley Mono",
 	"buffer_font_features": {
 		// Enable ligatures
-		"calt": true,
+		"calt": true
 	},
 	"terminal": {
 		"shell": {
-			"program": "fish",
+			"program": "fish"
 		},
 		"toolbar": {
-			"breadcrumbs": false,
-		},
+			"breadcrumbs": false
+		}
 	},
 	"lsp": {
 		"rust-analyzer": {
 			"initialization_options": {
 				"check": {
-					"command": "clippy", // rust-analyzer.check.command (default: "check")
-				},
-			},
-		},
+					"command": "clippy" // rust-analyzer.check.command (default: "check")
+				}
+			}
+		}
 	},
 	"autosave": "off",
 	"hard_tabs": true,
@@ -101,14 +102,17 @@
 		// Send debug info like crash reports.
 		"diagnostics": false,
 		// Send anonymized usage data like what languages you're using Zed with.
-		"metrics": false,
+		"metrics": false
 	},
 	"confirm_quit": true,
 	"extend_comment_on_newline": false,
 	"private_files": [".env", ".dev.vars", ".env.production"],
 	"languages": {
 		"Plain Text": {
-			"show_edit_predictions": false,
-		},
+			"show_edit_predictions": false
+		}
 	},
+	"session": {
+		"trust_all_worktrees": true
+	}
 }

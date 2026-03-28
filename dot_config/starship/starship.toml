@@ -3,6 +3,8 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
+format = '$all$aws$kubernetes$character'
+
 [aws]
 disabled = false
 format = '[aws $profile]($style) '
@@ -23,3 +25,21 @@ disabled = true
 
 [nodejs]
 symbol = "⬢ "
+
+[kubernetes]
+disabled = false
+format = '[($context)]($style) '
+style = 'red bold'
+detect_env_vars = ['AXELAR_K8S']
+
+[[kubernetes.contexts]]
+context_pattern = 'arn:aws:eks:us-east-2:\d+:cluster/mainnet-cluster'
+context_alias = 'mainnet'
+
+[[kubernetes.contexts]]
+context_pattern = 'arn:aws:eks:us-east-2:\d+:cluster/testnet-cluster'
+context_alias = 'testnet'
+
+[[kubernetes.contexts]]
+context_pattern = 'arn:aws:eks:us-east-2:\d+:cluster/devnet-cluster'
+context_alias = 'devnet'

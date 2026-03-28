@@ -1,13 +1,18 @@
-# theme = Argonaut
+theme = Argonaut
 # theme = farmhouse-light
 # theme = Batman
 # theme = light:farmhouse-light,dark:Batman
 # theme = 0x96f
 # theme = 12-bit Rainbow
-theme = Aura
+# theme = Aura
+# theme = Aizen Light
+# theme = GitHub Dark High Contrast
 
 font-family = Berkeley Mono
 unfocused-split-opacity = 0.94
 auto-update-channel = tip
 keybind = opt+backspace=text:\x17
 font-size = 16
+macos-icon = holographic
+# macos-icon = microchip
+# macos-icon = xray

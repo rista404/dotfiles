@@ -1,7 +1,8 @@
 [user]
 	name = Nikola Ristić
 	email = ristic@risticnikola.com
-	signingkey = 02BCD31040AB8CAD
+	# signingkey = 02BCD31040AB8CAD
+	signingkey = BAC115D25C7D2E61
 [init]
 	defaultBranch = main
 [core]
