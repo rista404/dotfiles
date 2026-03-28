@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# ── GPG / YubiKey ────────────────────────────────────────────────────────────
+# Imports public key from YubiKey and makes it trusted for commit signing
+if command -v gpg &>/dev/null; then
+  echo "Importing GPG public key from YubiKey (make sure it's plugged in)..."
+  gpg --card-status
+fi
+
 # ── Xcode CLI Tools ──────────────────────────────────────────────────────────
 if ! xcode-select -p &>/dev/null; then
   echo "Installing Xcode Command Line Tools..."
@@ -32,6 +39,13 @@ fi
 if [ "$SHELL" != "$FISH_PATH" ]; then
   echo "Setting fish as default shell..."
   chsh -s "$FISH_PATH"
+fi
+
+# ── Rust via rustup ──────────────────────────────────────────────────────────
+if ! command -v rustup &>/dev/null; then
+  echo "Installing Rust via rustup..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
+  source "$HOME/.cargo/env"
 fi
 
 # ── Node.js via fnm ───────────────────────────────────────────────────────────
