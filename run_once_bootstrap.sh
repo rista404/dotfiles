@@ -26,7 +26,7 @@ fi
 
 # ── Brew Bundle ───────────────────────────────────────────────────────────────
 echo "Installing packages from Brewfile..."
-brew bundle install --global
+brew bundle install --file ~/Brewfile
 
 # ── Fish shell ────────────────────────────────────────────────────────────────
 FISH_PATH="$(command -v fish)"
