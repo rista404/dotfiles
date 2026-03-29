@@ -43,3 +43,9 @@ context_alias = 'testnet'
 [[kubernetes.contexts]]
 context_pattern = 'arn:aws:eks:us-east-2:\d+:cluster/devnet-cluster'
 context_alias = 'devnet'
+
+[directory.substitutions]
+"~/dev/axelar/axelar-contract-deployments" = "acd"
+"~/dev/axelar/axelar-amplifier" = "amp"
+"~/dev/axelar/axelar-amplifier-solana" = "amp-sol"
+"~/dev/axelar/axelar-amplifier-stellar" = "amp-stellar"
