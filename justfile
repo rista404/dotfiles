@@ -1,3 +1,7 @@
+# apply chezmoi changes without running scripts
+apply:
+    chezmoi apply --exclude=scripts
+
 # re-add configs that are often edited directly
 sync:
     chezmoi re-add ~/.config/zed/settings.json ~/.config/zed/keymap.json ~/.config/ghostty/config
