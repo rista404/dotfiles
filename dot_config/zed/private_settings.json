@@ -7,7 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"git_panel": {
+	"icon_theme": {
+  "mode": "dark",
+  "light": "Zed (Default)",
+  "dark": "Zed (Default)"
+ },
+ "git_panel": {
 		"tree_view": true
 	},
 	"search": {
@@ -46,7 +51,7 @@
 		"modal_max_width": "large"
 	},
 	"theme": {
-		"dark": "Fleet Dark",
+		"dark": "Fleet Dark Purple",
 		"light": "Kanagawa Lotus - No Italics",
 		"mode": "dark"
 	},

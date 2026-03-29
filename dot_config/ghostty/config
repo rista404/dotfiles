@@ -1,4 +1,4 @@
-theme = Argonaut
+# theme = Argonaut
 # theme = farmhouse-light
 # theme = Batman
 # theme = light:farmhouse-light,dark:Batman
@@ -7,6 +7,7 @@ theme = Argonaut
 # theme = Aura
 # theme = Aizen Light
 # theme = GitHub Dark High Contrast
+theme = Floraverse
 
 font-family = Berkeley Mono
 unfocused-split-opacity = 0.94
