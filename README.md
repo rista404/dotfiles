@@ -35,10 +35,7 @@ Plug in your YubiKey, then:
 curl -fsSL https://github.com/rista404.gpg -o /tmp/rista404.gpg
 gpg --import /tmp/rista404.gpg
 rm /tmp/rista404.gpg
-# Disable macOS smart card daemon conflict
-sudo defaults write /Library/Preferences/com.apple.security.smartcard DisabledTokens -array com.apple.CryptoTokenKit.AppleSmartCardToken
 gpgconf --kill all
-export GPG_TTY=/dev/tty
 gpg --card-status
 ```
 
