@@ -91,7 +91,6 @@ set -gx DYLD_FALLBACK_LIBRARY_PATH /opt/homebrew/opt/llvm/lib
 # Solana C libs fix
 set -gx CPATH /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 
-# amp
 fish_add_path ~/.local/bin
 
 fnm env --shell fish | source
