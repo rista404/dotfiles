@@ -93,6 +93,18 @@ set -gx CPATH /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 
 fish_add_path ~/.local/bin
 
+# plamen
+
+fish_add_path $HOME/.plamen
+
+# risc0
+
+fish_add_path $HOME/.risc0/bin
+
+#
+# Node
+#
+
 fnm env --shell fish | source
 
 

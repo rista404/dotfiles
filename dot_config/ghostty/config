@@ -7,13 +7,16 @@
 # theme = Aura
 # theme = Aizen Light
 # theme = GitHub Dark High Contrast
-theme = Floraverse
+# theme = Floraverse
+
+# theme = 3024 Day
+theme = Banana Blueberry
 
 font-family = Berkeley Mono
 unfocused-split-opacity = 0.94
 auto-update-channel = tip
 keybind = opt+backspace=text:\x17
 font-size = 16
-macos-icon = holographic
-# macos-icon = microchip
+# macos-icon = holographic
+macos-icon = microchip
 # macos-icon = xray
