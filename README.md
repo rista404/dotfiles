@@ -56,3 +56,26 @@ chezmoi init --apply rista404
 ```
 
 This clones the repo and applies all dotfiles. It will also run the post-install script which installs all packages from Brewfile, sets fish as default shell, installs Rust and Node.js.
+
+## Updating dotfiles
+
+After changing managed files, update the chezmoi source state and push it:
+
+```sh
+chezmoi diff
+chezmoi re-add
+chezmoi cd
+git diff
+git status
+git add .
+git commit -m "Update dotfiles"
+git push
+```
+
+`chezmoi diff` previews local changes before they are added to the source state. `git diff` then shows exactly what will be committed.
+
+On another machine, pull the latest source state and apply it:
+
+```sh
+chezmoi update
+```
